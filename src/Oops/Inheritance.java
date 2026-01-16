@@ -19,10 +19,16 @@ class Mul extends Sub {
         return (a*b);
     }
 }
+class Div extends Mul{
+    int div(int a, int b)
+    {
+        return (a/b);
+    }
+}
 public class Inheritance {
     public static void main(String []args){
 //        Sub sb=new Sub();
-        Mul mm=new Mul();
+        Div mm=new Div();
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter number a");
         int m= sc.nextInt();
@@ -31,9 +37,12 @@ public class Inheritance {
         int a= mm.add(m,mn);
         int b=mm.sub(m,mn);
         int ml=mm.mul(m,mn);
+        int dv=mm.div(m,mn);
         System.out.println("Addition of given number: "+a);
         System.out.println("Substraction of given number: "+b);
         System.out.println("Multiplication of given number: "+ml);
+        System.out.println("Divination of given number: "+dv);
+
 
     }
 }
